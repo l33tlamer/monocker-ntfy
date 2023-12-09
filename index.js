@@ -60,7 +60,7 @@ async function sendNtfySh(title, message){
     	...{
         	'Content-Type': 'text/plain',
         	'Title': title,
-        	'Tags': 'whale2,server,docker',
+        	'Tags': 'whale2',
         	'Priority': ((message.includes("dead") || message.includes("unhealthy")) ? 4 : 3)
     	},
       	...((msgDetails.length == 4 && msgDetails[3].length > 0) && { "Authorization": `Bearer ${msgDetails[3]}`})
@@ -126,7 +126,8 @@ async function send(message) {
             sendDiscord(title, message);
             break;
         case "ntfy.sh":
-            sendNtfySh(title, message)            
+            sendNtfySh(title, message);
+            break;
         case "default":
             // do nothing
             break;
