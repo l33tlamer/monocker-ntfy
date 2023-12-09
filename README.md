@@ -32,6 +32,7 @@ services:
       # MESSAGE_PLATFORM: 'pushbullet@your_api_key@your_device_id'
       # MESSAGE_PLATFORM: 'pushover@your_user_key@your_app_api_token'
       # MESSAGE_PLATFORM: 'discord@webhook_url'
+      # MESSAGE_PLATFORM: 'ntfy.sh@ntfy_url@topic@optional_token'
       # MESSAGE_PLATFORM: ''
       # Optional - includes or excludes specified containers - default behaviour is false
       LABEL_ENABLE: 'false'
@@ -51,6 +52,9 @@ services:
 - For Pushbullet: Open Pushbullet in a browser and get device ID from URL [Example](https://raw.githubusercontent.com/petersem/monocker/master/doco/pbdeviceid.PNG)
 - For Pushover: See pushover doco for user key and app token
 - For Discord: See Discord doco for how to create a webhook and get the url
+- For ntfy.sh: Set ntfy_url (=https://ntfy.sh for public server, else your own instance), topic (=channel) and optionally the access token (in case the topic is secured)
+
+*(ntfy.sh was added based on [this pull request](https://github.com/petersem/monocker/pull/62/commits/0143e94dd5467b10519c51ce4ff66135d5816eed) by codebude to the original monocker repo.)*
 
 #### LABEL_ENABLE
 This is an optional value, and defaults to false if it is not specified. This feature allows you to specify (with labels) 'either' specific containers to monitor or exclude from monitoring. 
