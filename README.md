@@ -8,6 +8,7 @@ Monitors Docker (MONitors dOCKER) containers and alerts on 'state' change
 - Pushbullet integration
 - Pushover integration
 - Discord integration (via webhooks)
+- [ntfy.sh](https://ntfy.sh/) integration
 - Monitors 'state' changes for all containers (every 10 seconds)
 - Specific inclusions or exclusions of containers to monitor
 - Optionally, only alert on state changes to (paused, exited, running (unhealthy), or dead)
